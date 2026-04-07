@@ -1,11 +1,9 @@
-import { Play } from "lucide-react";
-
-const placeholderVideos = [
-  { id: 1, title: "Wedding Highlights" },
-  { id: 2, title: "Baby Bump Session" },
-  { id: 3, title: "Birthday Celebration" },
-  { id: 4, title: "Corporate Event" },
-  { id: 5, title: "Engagement Shoot" },
+const videos = [
+  { id: "e5PTuJy853o", title: "Sriharsha + Sravya Pre Wedding Teaser" },
+  { id: "B5ICpOXqfoA", title: "Sai & Saraswathi Wedding Film" },
+  { id: "Dcd4o7uCQLM", title: "Vamika 1st Birthday Promo" },
+  { id: "3XdQzzumLXs", title: "Vamika Pre Birthday Promo 2026" },
+  { id: "In8Z2kCmzJA", title: "Srinivas + Anitha House Warming Ceremony" },
 ];
 
 const VideosSection = () => (
@@ -16,34 +14,42 @@ const VideosSection = () => (
         <h2 className="font-heading text-3xl md:text-4xl text-foreground">Featured Videos</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {placeholderVideos.slice(0, 3).map((v) => (
-          <div key={v.id} className="group relative aspect-video bg-muted rounded-lg overflow-hidden cursor-pointer">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Play size={24} className="text-primary ml-1" />
-              </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4">
-              <p className="text-sm font-heading text-foreground">{v.title}</p>
-              <p className="text-xs text-muted-foreground">Replace with your video</p>
-            </div>
+        {videos.slice(0, 3).map((v) => (
+          <div key={v.id} className="relative aspect-video rounded-lg overflow-hidden border border-border">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${v.id}`}
+              title={v.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         ))}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 max-w-2xl mx-auto">
-        {placeholderVideos.slice(3).map((v) => (
-          <div key={v.id} className="group relative aspect-video bg-muted rounded-lg overflow-hidden cursor-pointer">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Play size={24} className="text-primary ml-1" />
-              </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4">
-              <p className="text-sm font-heading text-foreground">{v.title}</p>
-              <p className="text-xs text-muted-foreground">Replace with your video</p>
-            </div>
+        {videos.slice(3).map((v) => (
+          <div key={v.id} className="relative aspect-video rounded-lg overflow-hidden border border-border">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${v.id}`}
+              title={v.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         ))}
+      </div>
+      <div className="text-center mt-8">
+        <a
+          href="https://www.youtube.com/@visualcapturephotography625"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-8 py-3 border border-primary text-primary text-sm tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all"
+        >
+          View All on YouTube
+        </a>
       </div>
     </div>
   </section>
