@@ -1,4 +1,4 @@
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Instagram } from "lucide-react";
 
 const ContactSection = () => (
   <section id="contact" className="py-20 md:py-28 bg-secondary">
@@ -13,21 +13,41 @@ const ContactSection = () => (
             <Phone size={20} className="text-primary mt-1" />
             <div>
               <p className="text-foreground font-medium text-sm">Phone</p>
-              <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+              <a href="tel:+918096143780" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                +91 80961 43780
+              </a>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <Mail size={20} className="text-primary mt-1" />
+            <MapPin size={20} className="text-primary mt-1" />
             <div>
-              <p className="text-foreground font-medium text-sm">Email</p>
-              <p className="text-muted-foreground text-sm">hello@visualcapture.com</p>
+              <p className="text-foreground font-medium text-sm">Address</p>
+              <p className="text-muted-foreground text-sm">
+                Shop No.7, 8-91/145, Phase 4,<br />
+                Hastinapuram, Hyderabad,<br />
+                Telangana 500079, India
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <Clock size={20} className="text-primary mt-1" />
             <div>
               <p className="text-foreground font-medium text-sm">Working Hours</p>
-              <p className="text-muted-foreground text-sm">Mon - Sat: 9AM - 7PM</p>
+              <p className="text-muted-foreground text-sm">Open 24 Hours</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <Instagram size={20} className="text-primary mt-1" />
+            <div>
+              <p className="text-foreground font-medium text-sm">Instagram</p>
+              <a
+                href="https://www.instagram.com/visualcapturephotography"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                @visualcapturephotography
+              </a>
             </div>
           </div>
         </div>
