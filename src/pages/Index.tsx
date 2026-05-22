@@ -5,6 +5,7 @@ import VideosSection from "@/components/VideosSection";
 import MapSection from "@/components/MapSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -15,6 +16,7 @@ const Index = () => (
     <MapSection />
     <ContactSection />
     <Footer />
+    <FloatingActions />
   </div>
 );
 

@@ -1,75 +1,89 @@
-import { Mail, Phone, Clock, MapPin, Instagram } from "lucide-react";
+import { Phone, Clock, MapPin, Instagram, MessageCircle, Youtube, Mail } from "lucide-react";
+
+const quickContacts = [
+  { label: "Call", value: "+91 80961 43780", href: "tel:+918096143780", icon: Phone, tone: "bg-ink text-cream" },
+  { label: "WhatsApp", value: "Chat now", href: "https://wa.me/918096143780", icon: MessageCircle, tone: "bg-whatsapp text-white" },
+  { label: "Instagram", value: "@visualcapturephotography", href: "https://www.instagram.com/visualcapturephotography", icon: Instagram, tone: "bg-instagram text-white" },
+  { label: "YouTube", value: "Visit channel", href: "https://www.youtube.com/@visualcapturephotography625", icon: Youtube, tone: "bg-youtube text-white" },
+];
 
 const ContactSection = () => (
   <section id="contact" className="py-20 md:py-28 bg-secondary">
-    <div className="container max-w-4xl">
-      <div className="text-center mb-14">
-        <p className="text-sm tracking-[0.3em] uppercase text-primary mb-2">Get in Touch</p>
-        <h2 className="font-heading text-3xl md:text-4xl text-foreground">Contact Us</h2>
+    <div className="container max-w-6xl">
+      <div className="text-center mb-12">
+        <p className="eyebrow mb-3">Get in Touch</p>
+        <h2 className="font-heading text-4xl md:text-5xl text-ink">
+          Let's plan your <span className="italic text-coral">shoot</span>
+        </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="space-y-6">
-          <div className="flex items-start gap-4">
-            <Phone size={20} className="text-primary mt-1" />
-            <div>
-              <p className="text-foreground font-medium text-sm">Phone</p>
-              <a href="tel:+918096143780" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                +91 80961 43780
-              </a>
+
+      {/* Quick channels — prominent */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-12">
+        {quickContacts.map(({ label, value, href, icon: Icon, tone }) => (
+          <a
+            key={label}
+            href={href}
+            target={href.startsWith("http") ? "_blank" : undefined}
+            rel="noopener noreferrer"
+            className="group rounded-2xl p-5 bg-card shadow-soft hover:shadow-lift transition-all hover:-translate-y-1"
+          >
+            <div className={`h-11 w-11 rounded-full grid place-items-center ${tone} mb-3`}>
+              <Icon size={18} />
             </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <MapPin size={20} className="text-primary mt-1" />
+            <p className="text-xs uppercase tracking-widest text-muted-foreground">{label}</p>
+            <p className="text-sm font-medium text-ink mt-1 truncate">{value}</p>
+          </a>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-card rounded-3xl p-6 md:p-10 shadow-soft">
+        <div className="space-y-5">
+          <h3 className="font-heading text-2xl text-ink">Studio details</h3>
+          <div className="flex items-start gap-3">
+            <MapPin size={18} className="text-coral mt-1 shrink-0" />
             <div>
-              <p className="text-foreground font-medium text-sm">Address</p>
+              <p className="text-ink text-sm font-medium">Address</p>
               <p className="text-muted-foreground text-sm">
-                Shop No.7, 8-91/145, Phase 4,<br />
-                Hastinapuram, Hyderabad,<br />
-                Telangana 500079, India
+                Shop No.7, 8-91/145, Phase 4, Hastinapuram, Hyderabad, Telangana 500079
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <Clock size={20} className="text-primary mt-1" />
+          <div className="flex items-start gap-3">
+            <Clock size={18} className="text-coral mt-1 shrink-0" />
             <div>
-              <p className="text-foreground font-medium text-sm">Working Hours</p>
-              <p className="text-muted-foreground text-sm">Open 24 Hours</p>
+              <p className="text-ink text-sm font-medium">Working Hours</p>
+              <p className="text-muted-foreground text-sm">Open 24 hours · 7 days a week</p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <Instagram size={20} className="text-primary mt-1" />
+          <div className="flex items-start gap-3">
+            <Mail size={18} className="text-coral mt-1 shrink-0" />
             <div>
-              <p className="text-foreground font-medium text-sm">Instagram</p>
-              <a
-                href="https://www.instagram.com/visualcapturephotography"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground text-sm hover:text-primary transition-colors"
-              >
-                @visualcapturephotography
-              </a>
+              <p className="text-ink text-sm font-medium">Email</p>
+              <p className="text-muted-foreground text-sm">hello@visualcapture.com</p>
             </div>
           </div>
         </div>
-        <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+
+        <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+          <h3 className="font-heading text-2xl text-ink">Send a message</h3>
           <input
             type="text"
-            placeholder="Your Name"
-            className="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+            placeholder="Your name"
+            className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-ink placeholder:text-muted-foreground focus:outline-none focus:border-coral transition-colors"
           />
           <input
             type="email"
-            placeholder="Your Email"
-            className="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+            placeholder="Email or phone"
+            className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-ink placeholder:text-muted-foreground focus:outline-none focus:border-coral transition-colors"
           />
           <textarea
-            placeholder="Your Message"
+            placeholder="Tell us about your event"
             rows={4}
-            className="w-full bg-muted border border-border rounded-md px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+            className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-ink placeholder:text-muted-foreground focus:outline-none focus:border-coral transition-colors resize-none"
           />
           <button
             type="submit"
-            className="w-full py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-gold-dark transition-colors"
+            className="w-full py-3 rounded-xl bg-coral text-white text-sm font-medium hover:bg-coral/90 transition-colors"
           >
             Send Message
           </button>
