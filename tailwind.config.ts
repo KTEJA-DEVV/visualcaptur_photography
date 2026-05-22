@@ -56,7 +56,15 @@ export default {
           soft: "hsl(var(--ink-soft))",
         },
         cream: "hsl(var(--cream))",
-        coral: "hsl(var(--coral))",
+        silver: {
+          DEFAULT: "hsl(var(--silver))",
+          light: "hsl(var(--silver-light))",
+        },
+        red: {
+          DEFAULT: "hsl(var(--red))",
+          dark: "hsl(var(--red-dark))",
+        },
+        coral: "hsl(var(--red))",
         whatsapp: "hsl(var(--whatsapp))",
         youtube: "hsl(var(--youtube))",
         instagram: "hsl(var(--instagram))",
