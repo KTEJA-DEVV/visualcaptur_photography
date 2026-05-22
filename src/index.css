@@ -6,60 +6,66 @@
 
 @layer base {
   :root {
-    /* Logo-derived palette: deep navy ink + warm cream + coral accent */
-    --background: 36 33% 97%;
-    --foreground: 210 30% 12%;
+    /* Logo palette: black ink + silver/gray + signature red */
+    --background: 0 0% 99%;
+    --foreground: 0 0% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 30% 12%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 30% 12%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 210 30% 14%;
-    --primary-foreground: 36 33% 97%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 36 25% 93%;
-    --secondary-foreground: 210 30% 14%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 36 20% 90%;
-    --muted-foreground: 210 12% 38%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 14 72% 58%;
+    --accent: 0 78% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 88%;
-    --input: 210 15% 88%;
-    --ring: 14 72% 58%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 78% 50%;
 
     --radius: 1rem;
 
-    --ink: 210 30% 14%;
-    --ink-soft: 210 22% 26%;
-    --cream: 36 33% 97%;
-    --coral: 14 72% 58%;
+    --ink: 0 0% 8%;
+    --ink-soft: 0 0% 22%;
+    --silver: 0 0% 75%;
+    --silver-light: 0 0% 92%;
+    --cream: 0 0% 98%;
+    --red: 0 78% 50%;
+    --red-dark: 0 80% 42%;
+
     --whatsapp: 142 70% 45%;
-    --youtube: 0 80% 55%;
+    --youtube: 0 80% 50%;
     --instagram: 320 70% 55%;
 
-    --overlay: 210 30% 8%;
+    --overlay: 0 0% 4%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(210 30% 10% / 0.55), hsl(210 30% 14% / 0.35) 50%, hsl(14 72% 40% / 0.4));
-    --gradient-accent: linear-gradient(135deg, hsl(14 80% 62%), hsl(14 72% 50%));
-    --shadow-soft: 0 10px 30px -12px hsl(210 30% 14% / 0.18);
-    --shadow-lift: 0 24px 60px -20px hsl(210 30% 14% / 0.35);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4% / 0.7), hsl(0 0% 8% / 0.4) 55%, hsl(0 78% 30% / 0.55));
+    --gradient-accent: linear-gradient(135deg, hsl(0 78% 55%), hsl(0 82% 42%));
+    --gradient-silver: linear-gradient(135deg, hsl(0 0% 96%), hsl(0 0% 82%));
+    --shadow-soft: 0 10px 30px -12px hsl(0 0% 0% / 0.15);
+    --shadow-lift: 0 24px 60px -20px hsl(0 0% 0% / 0.35);
+    --shadow-red: 0 16px 40px -16px hsl(0 78% 50% / 0.55);
 
-    --sidebar-background: 36 33% 97%;
-    --sidebar-foreground: 210 30% 14%;
-    --sidebar-primary: 210 30% 14%;
-    --sidebar-primary-foreground: 36 33% 97%;
-    --sidebar-accent: 36 25% 93%;
-    --sidebar-accent-foreground: 210 30% 14%;
-    --sidebar-border: 210 15% 88%;
-    --sidebar-ring: 14 72% 58%;
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 0 0% 8%;
+    --sidebar-primary: 0 0% 8%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 78% 50%;
   }
 }
 
@@ -70,19 +76,28 @@
 }
 
 @layer utilities {
-  .text-accent-gradient {
+  .text-red-gradient {
     background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .text-silver-gradient {
+    background: linear-gradient(135deg, hsl(0 0% 65%), hsl(0 0% 95%), hsl(0 0% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-gradient-accent { background: var(--gradient-accent); }
+  .bg-gradient-silver { background: var(--gradient-silver); }
   .overlay-hero { background: var(--gradient-hero); }
   .overlay-gradient-up {
-    background: linear-gradient(to top, hsl(var(--overlay) / 0.85), hsl(var(--overlay) / 0));
+    background: linear-gradient(to top, hsl(var(--overlay) / 0.9), hsl(var(--overlay) / 0));
   }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-lift { box-shadow: var(--shadow-lift); }
+  .shadow-red { box-shadow: var(--shadow-red); }
   .eyebrow {
-    @apply text-xs tracking-[0.3em] uppercase text-accent font-medium;
+    @apply text-xs tracking-[0.3em] uppercase text-red font-semibold;
   }
 }
