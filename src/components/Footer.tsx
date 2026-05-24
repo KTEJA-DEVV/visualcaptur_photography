@@ -24,7 +24,7 @@ const Footer = () => (
         <div>
           <h4 className="font-heading text-base mb-4">Portfolio</h4>
           <div className="flex flex-col gap-2">
-            {["Weddings", "Baby Bump", "Birthdays", "Events"].map((cat) => (
+            {["Weddings", "Pre Wedding", "Birthdays", "Events"].map((cat) => (
               <Link key={cat} to={`/${cat.toLowerCase().replace(" ", "-")}`} className="text-sm text-cream/70 hover:text-coral transition-colors">
                 {cat}
               </Link>
