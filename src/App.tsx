@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index";
 import Weddings from "./pages/Weddings";
-import BabyBump from "./pages/BabyBump";
+import PreWedding from "./pages/PreWedding";
 import Birthdays from "./pages/Birthdays";
 import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
@@ -21,7 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/weddings" element={<Weddings />} />
-          <Route path="/baby-bump" element={<BabyBump />} />
+          <Route path="/pre-wedding" element={<PreWedding />} />
           <Route path="/birthdays" element={<Birthdays />} />
           <Route path="/events" element={<Events />} />
           <Route path="*" element={<NotFound />} />

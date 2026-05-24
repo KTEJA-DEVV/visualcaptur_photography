@@ -24,7 +24,7 @@ const HeroSection = () => (
           <span className="italic text-accent-gradient">beautifully</span> kept.
         </h1>
         <p className="text-cream/80 max-w-md mt-6 text-base md:text-lg leading-relaxed">
-          Weddings, baby bumps, birthdays and events — captured with a cinematic eye by Visual Capture Photo Studio.
+          Weddings, pre-weddings, birthdays and events — captured with a cinematic eye by Visual Capture Photo Studio.
         </p>
         <div className="flex flex-wrap gap-3 mt-8">
           <a

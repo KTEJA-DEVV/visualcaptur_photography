@@ -6,7 +6,7 @@ import logo from "@/assets/logo.jpg";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Weddings", path: "/weddings" },
-  { label: "Baby Bump", path: "/baby-bump" },
+  { label: "Pre Wedding", path: "/pre-wedding" },
   { label: "Birthdays", path: "/birthdays" },
   { label: "Events", path: "/events" },
 ];

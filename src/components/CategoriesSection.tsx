@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import weddingsImg from "@/assets/category-weddings.jpg";
-import babyBumpImg from "@/assets/category-babybump.jpg";
+import preWeddingImg from "@/assets/category-babybump.jpg";
 import birthdaysImg from "@/assets/category-birthdays.jpg";
 import eventsImg from "@/assets/category-events.jpg";
 
 const categories = [
   { title: "Weddings", path: "/weddings", image: weddingsImg, desc: "Timeless wedding films & stills" },
-  { title: "Baby Bump", path: "/baby-bump", image: babyBumpImg, desc: "Maternity portraits, glowing" },
+  { title: "Pre Wedding", path: "/pre-wedding", image: preWeddingImg, desc: "Romantic couple shoots" },
   { title: "Birthdays", path: "/birthdays", image: birthdaysImg, desc: "Joyful candid celebrations" },
   { title: "Events", path: "/events", image: eventsImg, desc: "Ceremonies, parties, milestones" },
 ];
