@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import weddingsImg from "@/assets/category-weddings.jpg";
-import preWeddingImg from "@/assets/category-babybump.jpg";
+import preWeddingImg from "@/assets/prewedding/red-dress-bridge.jpg";
 import birthdaysImg from "@/assets/category-birthdays.jpg";
 import eventsImg from "@/assets/category-events.jpg";
 
