@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import ownerHero from "@/assets/owner-hero.jpg";
 
 const HeroSection = () => (
-  <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+  <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-ink">
     <img
-      src={heroBg}
-      alt="Visual Capture Photo Studio"
-      width={1920}
-      height={1080}
-      className="absolute inset-0 w-full h-full object-cover"
+      src={ownerHero}
+      alt="Owner of Visual Capture Photo Studio holding a cinema camera"
+      width={1280}
+      height={1920}
+      className="absolute inset-0 w-full h-full object-cover object-[75%_center] md:object-[80%_center]"
     />
     <div className="absolute inset-0 overlay-hero" />
+    <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/60 to-transparent md:from-ink/80 md:via-ink/40 md:to-transparent" />
+
 
     <div className="container relative z-10 pt-24 pb-32 md:py-0">
       <div className="max-w-2xl animate-fade-in">
