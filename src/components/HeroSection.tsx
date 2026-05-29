@@ -9,10 +9,10 @@ const HeroSection = () => (
       alt="Owner of Visual Capture Photo Studio holding a cinema camera"
       width={1280}
       height={1920}
-      className="absolute right-0 top-0 h-full w-[42%] sm:w-[40%] md:w-[45%] lg:w-[42%] object-cover object-[55%_15%]"
+      className="absolute inset-0 w-full h-full object-cover object-[75%_center] md:object-[80%_center]"
     />
     <div className="absolute inset-0 overlay-hero" />
-    <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-transparent md:from-ink/90 md:via-ink/55 md:to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/60 to-transparent md:from-ink/80 md:via-ink/40 md:to-transparent" />
 
 
     <div className="container relative z-10 pt-24 pb-32 md:py-0">
