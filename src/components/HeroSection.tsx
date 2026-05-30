@@ -4,7 +4,7 @@ import ownerHero from "@/assets/owner-hero.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => (
-  <section className="relative min-h-[100svh] w-full flex items-center overflow-hidden bg-ink">
+  <section className="relative min-h-[100svh] w-full flex items-stretch overflow-hidden bg-ink">
     {/* Photography-themed background */}
     <img
       src={heroBg}
@@ -16,10 +16,7 @@ const HeroSection = () => (
     />
 
     {/* Subtle dark wash for legibility */}
-    <div className="absolute inset-0 bg-ink/40" />
-
-    {/* Full-section glassmorphism */}
-    <div className="absolute inset-0 bg-cream/5 backdrop-blur-md border-y border-cream/10" />
+    <div className="absolute inset-0 bg-ink/50" />
 
     {/* Soft red ambient accent */}
     <div
@@ -30,10 +27,10 @@ const HeroSection = () => (
       }}
     />
 
-    <div className="container relative z-10 py-24 md:py-0">
-      <div className="grid md:grid-cols-2 items-center gap-10 md:gap-6">
+    <div className="container relative z-10 flex-1 flex flex-col justify-end pt-24 md:pt-0">
+      <div className="grid md:grid-cols-2 items-end gap-6 md:gap-6">
         {/* Text */}
-        <div className="order-2 md:order-1 max-w-xl animate-fade-in text-center md:text-left">
+        <div className="order-2 md:order-1 max-w-xl animate-fade-in text-center md:text-left pb-10 md:pb-24">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 text-cream text-xs tracking-[0.25em] uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-coral" />
             Hyderabad · Available 24/7
@@ -63,8 +60,8 @@ const HeroSection = () => (
           </div>
         </div>
 
-        {/* Owner image */}
-        <div className="order-1 md:order-2 relative flex justify-center md:justify-end items-end h-[45vh] sm:h-[55vh] md:h-[88vh]">
+        {/* Owner image — flush at section bottom */}
+        <div className="order-1 md:order-2 relative flex justify-center md:justify-end items-end h-[50vh] sm:h-[60vh] md:h-[95vh]">
           <img
             src={ownerHero}
             alt="Owner of Visual Capture Photo Studio holding a cinema camera"
@@ -75,14 +72,8 @@ const HeroSection = () => (
         </div>
       </div>
     </div>
-
-    <div className="absolute bottom-6 left-0 right-0 z-10 hidden md:flex justify-center">
-      <div className="flex items-center gap-2 text-cream/70 text-xs tracking-[0.3em] uppercase">
-        <div className="h-px w-10 bg-cream/40" />
-        Scroll
-      </div>
-    </div>
   </section>
+
 );
 
 export default HeroSection;
