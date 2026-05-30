@@ -1,39 +1,33 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import ownerHero from "@/assets/owner-hero.png";
+import photographyBg from "@/assets/hero-photography-bg.jpg";
 
 const HeroSection = () => (
   <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-ink">
-    {/* Ambient background gradient */}
-    <div
-      className="absolute inset-0"
-      style={{
-        background:
-          "radial-gradient(circle at 70% 50%, hsl(0 78% 30% / 0.35), transparent 60%), linear-gradient(135deg, hsl(0 0% 6%), hsl(0 0% 10%))",
-      }}
-    />
-
-    {/* Owner image — centered/slight right on mobile, right on tablet+ */}
+    {/* Photography-themed background */}
     <img
-      src={ownerHero}
-      alt="Owner of Visual Capture Photo Studio holding a cinema camera"
-      width={1280}
-      height={1920}
-      className="absolute inset-y-0 right-0 h-full w-full object-contain object-[60%_bottom] md:w-[60%] md:object-[center_bottom] lg:w-[55%]"
+      src={photographyBg}
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 w-full h-full object-cover"
     />
+    {/* Mood overlay */}
+    <div className="absolute inset-0 bg-gradient-to-br from-ink/70 via-ink/40 to-ink/80" />
 
-    {/* Soft fade so text side stays legible */}
-    <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/20 to-transparent md:from-ink/60 md:via-ink/10" />
+    {/* Floating glass orbs for depth */}
+    <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-coral/20 blur-3xl" />
+    <div className="absolute bottom-0 right-1/3 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
 
-    <div className="container relative z-10 pt-24 pb-32 md:py-0">
-      <div className="max-w-2xl animate-fade-in">
-        {/* Glassmorphism panel */}
-        <div className="inline-block rounded-3xl bg-cream/5 backdrop-blur-xl border border-cream/15 shadow-lift p-6 md:p-8">
+    <div className="container relative z-10 py-24 md:py-0">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        {/* Glass text panel */}
+        <div className="animate-fade-in rounded-3xl bg-cream/[0.06] backdrop-blur-2xl border border-cream/15 shadow-lift p-6 md:p-10">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-xs tracking-[0.25em] uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-coral" />
+            <span className="h-1.5 w-1.5 rounded-full bg-coral animate-pulse" />
             Hyderabad · Available 24/7
           </span>
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-medium text-cream mt-6 leading-[0.95]">
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-medium text-cream mt-6 leading-[0.95]">
             Moments,<br />
             <span className="italic text-accent-gradient">beautifully</span> kept.
           </h1>
@@ -56,6 +50,29 @@ const HeroSection = () => (
               View Portfolio
             </Link>
           </div>
+        </div>
+
+        {/* Glass image panel */}
+        <div className="relative animate-fade-in hidden md:flex justify-center">
+          <div className="relative rounded-3xl bg-cream/[0.06] backdrop-blur-2xl border border-cream/15 shadow-lift p-4 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-coral/10 via-transparent to-primary/10 pointer-events-none" />
+            <img
+              src={ownerHero}
+              alt="Owner of Visual Capture Photo Studio holding a cinema camera"
+              width={800}
+              height={1200}
+              className="relative w-full max-w-md h-[70vh] object-contain object-bottom drop-shadow-2xl"
+            />
+          </div>
+        </div>
+
+        {/* Mobile image — floats below the glass card */}
+        <div className="md:hidden flex justify-center -mt-4">
+          <img
+            src={ownerHero}
+            alt="Owner of Visual Capture Photo Studio"
+            className="w-64 h-80 object-contain object-bottom drop-shadow-2xl"
+          />
         </div>
       </div>
     </div>
