@@ -27,12 +27,12 @@ const CategoriesSection = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {categories.map((cat) => (
           <Link
             key={cat.path}
             to={cat.path}
-            className="group relative aspect-[3/4] overflow-hidden rounded-2xl shadow-soft hover:shadow-lift transition-shadow"
+            className="group relative aspect-[3/4] max-h-[420px] overflow-hidden rounded-xl shadow-soft hover:shadow-lift transition-shadow"
           >
             <img
               src={cat.image}
