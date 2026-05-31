@@ -61,7 +61,7 @@ const HeroSection = () => (
         </div>
 
         {/* Owner image — flush at section bottom */}
-        <div className="order-2 relative flex justify-center md:justify-end items-center md:items-end h-[50vh] sm:h-[60vh] md:h-[95vh]">
+        <div className="order-2 relative flex justify-center md:justify-end items-center md:items-end h-[60vh] sm:h-[65vh] md:h-[95vh]">
           <img
             src={ownerHero}
             alt="Owner of Visual Capture Photo Studio holding a cinema camera"
