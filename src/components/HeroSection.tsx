@@ -28,7 +28,7 @@ const HeroSection = () => (
     />
 
     <div className="container relative z-10 flex-1 flex flex-col justify-end pt-24 md:pt-0">
-      <div className="grid md:grid-cols-2 items-end gap-6 md:gap-6">
+      <div className="grid md:grid-cols-2 items-end gap-0 md:gap-6">
         {/* Text */}
         <div className="order-1 max-w-xl animate-fade-in text-center md:text-left pb-10 md:pb-24">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 text-cream text-xs tracking-[0.25em] uppercase">
