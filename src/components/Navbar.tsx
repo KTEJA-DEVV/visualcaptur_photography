@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Pre Wedding", path: "/pre-wedding" },
   { label: "Birthdays", path: "/birthdays" },
   { label: "Events", path: "/events" },
+  { label: "About", path: "/about" },
 ];
 
 const Navbar = () => {
