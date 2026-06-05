@@ -71,7 +71,12 @@ const About = () => (
               src={photographer.url}
               alt="Portrait of the photographer holding a gimbal-mounted camera"
               className="w-full h-full object-cover"
+              width={1200}
+              height={1600}
               loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
             />
           </div>
           <div className="absolute -bottom-6 -right-2 md:-right-6 bg-cream rounded-2xl shadow-lift px-5 py-4 max-w-[220px]">
