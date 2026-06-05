@@ -59,7 +59,7 @@ const ContactSection = () => (
             <Mail size={18} className="text-coral mt-1 shrink-0" />
             <div>
               <p className="text-ink text-sm font-medium">Email</p>
-              <p className="text-muted-foreground text-sm">hello@visualcapture.com</p>
+              <p className="text-muted-foreground text-sm">visualcapture2019@gmail.com</p>
             </div>
           </div>
         </div>
