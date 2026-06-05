@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index";
+import ScrollToTop from "./components/ScrollToTop";
 import Weddings from "./pages/Weddings";
 import PreWedding from "./pages/PreWedding";
 import Birthdays from "./pages/Birthdays";
@@ -19,6 +20,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/weddings" element={<Weddings />} />
