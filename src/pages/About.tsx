@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Camera, Heart, Award, Users, Quote } from "lucide-react";
+import { ArrowLeft, Camera, Heart, Award, Users, Quote, Phone } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
@@ -183,7 +183,7 @@ const About = () => (
             href="tel:+918096143780"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-coral text-white text-sm font-medium hover:bg-coral/90 transition-colors"
           >
-            Book a session
+            <Phone size={16} /> Call now
           </a>
         </div>
       </div>
