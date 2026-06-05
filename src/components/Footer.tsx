@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Phone, MapPin, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png.asset.json";
 
 const Footer = () => (
   <footer className="bg-ink text-cream">
