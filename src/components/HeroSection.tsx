@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import brandLogo from "@/assets/visualcapture-logo.png.asset.json";
 
 const HeroSection = () => (
   <section className="relative min-h-[100svh] w-full flex items-stretch overflow-hidden bg-ink">
