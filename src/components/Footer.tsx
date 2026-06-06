@@ -35,6 +35,7 @@ const Footer = () => (
           <h4 className="font-heading text-base mb-4">Get in Touch</h4>
           <div className="flex flex-col gap-3 text-sm text-cream/70">
             <a href="tel:+918096143780" className="flex items-center gap-2 hover:text-coral transition-colors"><Phone size={14} className="text-coral" /> +91 80961 43780</a>
+            <a href="tel:+918008006643" className="flex items-center gap-2 hover:text-coral transition-colors"><Phone size={14} className="text-coral" /> +91 80080 06643</a>
             <div className="flex items-start gap-2"><MapPin size={14} className="text-coral mt-0.5" /> Hastinapuram, Hyderabad</div>
           </div>
         </div>
