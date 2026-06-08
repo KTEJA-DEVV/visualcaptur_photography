@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo.url} alt="Visual Capture Photography" className="h-10 md:h-12 w-auto rounded-md bg-cream p-1" />
+          <img src={logo.url} alt="Visual Capture Photography" className="h-10 md:h-12 w-auto" />
           <span className={`hidden sm:block font-heading text-base leading-tight ${scrolled ? "text-ink" : "text-cream"}`}>
             Visual Capture
           </span>
