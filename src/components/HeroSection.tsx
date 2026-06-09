@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import brandLogo from "@/assets/visualcapture-logo.png";
+import brandLogo from "@/assets/visualcapture-logo.png.asset.json";
 
 const HeroSection = () => (
   <section className="relative min-h-[100svh] w-full flex items-stretch overflow-hidden bg-ink">
@@ -30,7 +30,7 @@ const HeroSection = () => (
     <div className="container relative z-10 flex-1 flex flex-col justify-center items-center text-center">
       <div className="max-w-2xl animate-fade-in py-12">
         <img
-          src={brandLogo}
+          src={brandLogo.url}
           alt="Visual Capture Photography"
           className="mx-auto mb-6 w-56 md:w-72 lg:w-80 h-auto drop-shadow-2xl"
         />

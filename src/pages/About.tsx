@@ -3,7 +3,7 @@ import { ArrowLeft, Camera, Heart, Award, Users, Quote, Phone } from "lucide-rea
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
-import photographer from "@/assets/photographer-portrait.jpg";
+import photographer from "@/assets/photographer-portrait.jpg.asset.json";
 
 const stats = [
   { icon: Award, value: "8+", label: "Years of Expertise" },
@@ -68,7 +68,7 @@ const About = () => (
         <div className="relative">
           <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-lift bg-muted">
             <img
-              src={photographer}
+              src={photographer.url}
               alt="Portrait of the photographer holding a gimbal-mounted camera"
               className="w-full h-full object-cover"
               width={1200}

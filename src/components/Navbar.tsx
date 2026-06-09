@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.png.asset.json";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo} alt="Visual Capture Photography" className="h-[3.75rem] md:h-[4.5rem] w-auto" />
+          <img src={logo.url} alt="Visual Capture Photography" className="h-[3.75rem] md:h-[4.5rem] w-auto" />
           <span className={`hidden sm:block font-heading text-base leading-tight ${scrolled ? "text-ink" : "text-cream"}`}>
             Visual Capture
           </span>
