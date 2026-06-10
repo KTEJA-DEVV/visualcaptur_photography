@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Phone, MapPin, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="bg-ink text-cream">
@@ -9,16 +9,10 @@ const Footer = () => (
         <div>
           <div className="flex items-center gap-2.5 mb-4">
             <img
-              src={logo?.url || "/placeholder.svg"}
+              src={logo}
               alt="Visual Capture"
               className="h-16 w-auto"
               style={{ maxWidth: "120px", height: "auto" }}
-              onError={(e) => {
-                const img = e.currentTarget as HTMLImageElement;
-                if (img.src !== "/placeholder.svg") {
-                  img.src = "/placeholder.svg";
-                }
-              }}
             />
             <span className="font-heading text-lg">Visual Capture</span>
           </div>
