@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Phone, MapPin, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.png.asset.json";
 
 const Footer = () => (
   <footer className="bg-ink text-cream">
@@ -8,20 +8,15 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-2.5 mb-4">
-            <img
-              src={logo}
-              alt="Visual Capture"
-              className="h-16 w-auto"
-              style={{ maxWidth: "120px", height: "auto" }}
-            />
+            <img src={logo.url} alt="Visual Capture" className="h-[4.5rem] w-auto" />
             <span className="font-heading text-lg">Visual Capture</span>
           </div>
           <p className="text-cream/70 text-sm leading-relaxed max-w-xs">
             Professional photography studio in Hyderabad — capturing life's most beautiful moments.
           </p>
           <div className="flex gap-2 mt-5">
-            <a href="https://www.instagram.com/visualcapturephotography" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-9 w-9 grid place-items-center rounded-full bg-cream/10 hover:bg-coral transition-colors"><Instagram size={16} /></a>
-            <a href="https://www.youtube.com/@visualcapturephotography625" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="h-9 w-9 grid place-items-center rounded-full bg-cream/10 hover:bg-coral transition-colors"><Youtube size={16} /></a>
+            <a href="https://www.instagram.com/visualcapturephotography" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-9 w-9 grid place-items-center rounded-full bg-cream/10 hover:bg-instagram transition-colors"><Instagram size={16} /></a>
+            <a href="https://www.youtube.com/@visualcapturephotography625" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="h-9 w-9 grid place-items-center rounded-full bg-cream/10 hover:bg-youtube transition-colors"><Youtube size={16} /></a>
             <a href="https://wa.me/918096143780" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="h-9 w-9 grid place-items-center rounded-full bg-cream/10 hover:bg-whatsapp transition-colors"><MessageCircle size={16} /></a>
             <a href="tel:+918096143780" aria-label="Call" className="h-9 w-9 grid place-items-center rounded-full bg-cream/10 hover:bg-coral transition-colors"><Phone size={16} /></a>
           </div>

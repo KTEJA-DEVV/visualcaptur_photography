@@ -3,7 +3,7 @@ import { ArrowLeft, Camera, Heart, Award, Users, Quote, Phone } from "lucide-rea
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
-import photographer from "@/assets/photographer-portrait.jpg";
+import photographer from "@/assets/photographer-portrait.jpg.asset.json";
 
 const stats = [
   { icon: Award, value: "8+", label: "Years of Expertise" },
@@ -16,7 +16,7 @@ const timeline = [
     year: "2017",
     title: "The First Click",
     text:
-      "It started with a borrowed entry-level DSLR and a curiosity that wouldn't quit. The very first frame — a friend's family function — taught me that a photograph can hold an entire feeling in a single moment.",
+      "It started with a borrowed entry-level DSLR and a curiosity that wouldn't quit. The very first frame — a friend's family function — taught me that a photograph can hold an entire feeling.",
   },
   {
     year: "2019",
@@ -34,7 +34,7 @@ const timeline = [
     year: "2026",
     title: "Still Inspired, Every Day",
     text:
-      "Eight years and 300+ events later, what inspires me is still the same: the quiet glance between a bride and groom, a grandmother's smile, a child's first birthday cake. Real moments — beautifully preserved.",
+      "Eight years and 300+ events later, what inspires me is still the same: the quiet glance between a bride and groom, a grandmother's smile, a child's first birthday cake. Real moments — beautifully kept.",
   },
 ];
 
@@ -66,15 +66,17 @@ const About = () => (
     <section className="py-16 md:py-24">
       <div className="container grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <div className="relative">
-          <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-lift bg-muted flex items-center justify-center">
+          <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-lift bg-muted">
             <img
-              src={photographer}
+              src={photographer.url}
               alt="Portrait of the photographer holding a gimbal-mounted camera"
               className="w-full h-full object-cover"
-              style={{ maxWidth: "100%", height: "100%", objectFit: "cover" }}
+              width={1200}
+              height={1600}
               loading="eager"
               decoding="async"
               fetchPriority="high"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
             />
           </div>
           <div className="absolute -bottom-6 -right-2 md:-right-6 bg-cream rounded-2xl shadow-lift px-5 py-4 max-w-[220px]">
@@ -147,7 +149,7 @@ const About = () => (
                   <p className="font-heading text-2xl text-coral">{item.year}</p>
                   <h3 className="font-heading text-xl text-ink mt-1">{item.title}</h3>
                 </div>
-                <div className="pl-12 md:pl-0 md:pr-10 mt-2 md:mt-0">
+                <div className="pl-12 md:pl-10 mt-2 md:mt-0">
                   <p className="text-muted-foreground leading-relaxed">{item.text}</p>
                 </div>
               </div>

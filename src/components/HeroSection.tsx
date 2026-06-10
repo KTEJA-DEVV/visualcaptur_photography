@@ -1,80 +1,69 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import brandLogoAsset from "@/assets/visualcapture-logo.png.asset.json";
+import brandLogo from "@/assets/visualcapture-logo.png.asset.json";
 
-const HeroSection = () => {
-  const brandLogo = brandLogoAsset?.url || "/placeholder.svg";
+const HeroSection = () => (
+  <section className="relative min-h-[100svh] w-full flex items-stretch overflow-hidden bg-ink">
+    {/* Photography-themed background */}
+    <img
+      src={heroBg}
+      alt=""
+      aria-hidden="true"
+      width={1920}
+      height={1080}
+      className="absolute inset-0 h-full w-full object-cover"
+    />
 
-  return (
-    <section className="relative min-h-[100svh] w-full flex items-stretch overflow-hidden bg-ink">
-      {/* Photography-themed background */}
-      <img
-        src={heroBg}
-        alt=""
-        aria-hidden="true"
-        width={1920}
-        height={1080}
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+    {/* Subtle dark wash for legibility */}
+    <div className="absolute inset-0 bg-ink/50" />
 
-      {/* Subtle dark wash for legibility */}
-      <div className="absolute inset-0 bg-ink/50" />
+    {/* Soft red ambient accent */}
+    <div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        background:
+          "radial-gradient(circle at 75% 50%, hsl(0 78% 30% / 0.25), transparent 65%)",
+      }}
+    />
 
-      {/* Soft red ambient accent */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle at 75% 50%, hsl(0 78% 30% / 0.25), transparent 65%)",
-        }}
-      />
-
-      <div className="container relative z-10 flex-1 flex flex-col justify-center items-center text-center">
-        <div className="max-w-2xl animate-fade-in py-12">
-          {/* Logo with improved sizing and fallback */}
-          <div className="flex justify-center mb-8">
-            <img
-              src={brandLogo}
-              alt="Visual Capture Photography"
-              className="w-[18rem] md:w-[24rem] lg:w-[28rem] h-auto drop-shadow-2xl"
-              style={{ maxWidth: "100%", height: "auto" }}
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-            />
-          </div>
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 text-cream text-xs tracking-[0.25em] uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-coral" />
-            Hyderabad · Available 24/7
-          </span>
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-medium text-cream mt-6 leading-[0.95]">
-            Moments,<br />
-            <span className="italic text-accent-gradient">beautifully</span> kept.
-          </h1>
-          <p className="text-cream/85 mt-6 text-base md:text-lg leading-relaxed">
-            Weddings, pre-weddings, birthdays and events — captured with a cinematic eye by Visual Capture Photography.
-          </p>
-          <div className="flex flex-wrap gap-3 mt-8 justify-center">
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-coral text-white text-sm font-medium hover:bg-coral/90 transition-all shadow-lift"
-            >
-              Book a Session
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <Link
-              to="/weddings"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/30 text-cream text-sm font-medium hover:bg-cream/20 transition-all"
-            >
-              <Play size={14} fill="currentColor" />
-              View Portfolio
-            </Link>
-          </div>
+    <div className="container relative z-10 flex-1 flex flex-col justify-center items-center text-center">
+      <div className="max-w-2xl animate-fade-in py-12">
+        <img
+          src={brandLogo.url}
+          alt="Visual Capture Photography"
+          className="mx-auto mt-8 w-[21rem] md:w-[27rem] lg:w-[30rem] h-auto drop-shadow-2xl"
+        />
+        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 text-cream text-xs tracking-[0.25em] uppercase">
+          <span className="h-1.5 w-1.5 rounded-full bg-coral" />
+          Hyderabad · Available 24/7
+        </span>
+        <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-medium text-cream mt-6 leading-[0.95]">
+          Moments,<br />
+          <span className="italic text-accent-gradient">beautifully</span> kept.
+        </h1>
+        <p className="text-cream/85 mt-6 text-base md:text-lg leading-relaxed">
+          Weddings, pre-weddings, birthdays and events — captured with a cinematic eye by Visual Capture Photography.
+        </p>
+        <div className="flex flex-wrap gap-3 mt-8 justify-center">
+          <a
+            href="#contact"
+            className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-coral text-white text-sm font-medium hover:bg-coral/90 transition-all shadow-lift"
+          >
+            Book a Session
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <Link
+            to="/weddings"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/30 text-cream text-sm font-medium hover:bg-cream/20 transition-all"
+          >
+            <Play size={14} fill="currentColor" />
+            View Portfolio
+          </Link>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default HeroSection;
