@@ -29,11 +29,21 @@ const HeroSection = () => (
 
     <div className="container relative z-10 flex-1 flex flex-col justify-center items-center text-center">
       <div className="max-w-2xl animate-fade-in py-12">
-        <img
-          src={brandLogo.url}
-          alt="Visual Capture Photography"
-          className="mx-auto mt-8 w-[21rem] md:w-[27rem] lg:w-[30rem] h-auto drop-shadow-2xl"
-        />
+        {/* Logo with improved sizing and fallback */}
+        <div className="flex justify-center mb-8">
+          <img
+            src={brandLogo?.url || "/placeholder.svg"}
+            alt="Visual Capture Photography"
+            className="w-[18rem] md:w-[24rem] lg:w-[28rem] h-auto drop-shadow-2xl"
+            style={{ maxWidth: "100%", height: "auto" }}
+            onError={(e) => {
+              const img = e.currentTarget as HTMLImageElement;
+              if (img.src !== "/placeholder.svg") {
+                img.src = "/placeholder.svg";
+              }
+            }}
+          />
+        </div>
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 text-cream text-xs tracking-[0.25em] uppercase">
           <span className="h-1.5 w-1.5 rounded-full bg-coral" />
           Hyderabad · Available 24/7
