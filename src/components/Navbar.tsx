@@ -32,7 +32,18 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo.url} alt="Visual Capture Photography" className="h-[3.75rem] md:h-[4.5rem] w-auto" />
+          <img
+            src={logo?.url || "/placeholder.svg"}
+            alt="Visual Capture Photography"
+            className="h-14 md:h-16 w-auto"
+            style={{ maxWidth: "200px", height: "auto" }}
+            onError={(e) => {
+              const img = e.currentTarget as HTMLImageElement;
+              if (img.src !== "/placeholder.svg") {
+                img.src = "/placeholder.svg";
+              }
+            }}
+          />
           <span className={`hidden sm:block font-heading text-base leading-tight ${scrolled ? "text-ink" : "text-cream"}`}>
             Visual Capture
           </span>
