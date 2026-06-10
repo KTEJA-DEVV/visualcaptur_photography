@@ -28,7 +28,7 @@ const timeline = [
     year: "2021",
     title: "Visual Capture is Born",
     text:
-      "I launched Visual Capture Photo Studio in Hyderabad with one promise — to treat every wedding, birthday and event like it was my own family's moment.",
+      "I launched Visual Capture Photography in Hyderabad with one promise — to treat every wedding, birthday and event like it was my own family's moment.",
   },
   {
     year: "2026",

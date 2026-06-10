@@ -41,7 +41,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-cream/10 mt-12 pt-6 text-center text-xs text-cream/50">
-        © {new Date().getFullYear()} Visual Capture Photo Studio. All rights reserved.
+        © {new Date().getFullYear()} Visual Capture Photography. All rights reserved.
       </div>
     </div>
   </footer>
