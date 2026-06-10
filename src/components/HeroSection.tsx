@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import brandLogo from "@/assets/visualcapture-logo.png.asset.json";
+import brandLogo from "@/assets/visualcapture-logo.png";
 
 const HeroSection = () => (
   <section className="relative min-h-[100svh] w-full flex items-stretch overflow-hidden bg-ink">
@@ -32,16 +32,10 @@ const HeroSection = () => (
         {/* Logo with improved sizing and fallback */}
         <div className="flex justify-center mb-8">
           <img
-            src={brandLogo?.url || "/placeholder.svg"}
+            src={brandLogo}
             alt="Visual Capture Photography"
             className="w-[18rem] md:w-[24rem] lg:w-[28rem] h-auto drop-shadow-2xl"
             style={{ maxWidth: "100%", height: "auto" }}
-            onError={(e) => {
-              const img = e.currentTarget as HTMLImageElement;
-              if (img.src !== "/placeholder.svg") {
-                img.src = "/placeholder.svg";
-              }
-            }}
           />
         </div>
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 text-cream text-xs tracking-[0.25em] uppercase">
