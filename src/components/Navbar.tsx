@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -33,16 +33,10 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2.5">
           <img
-            src={logo?.url || "/placeholder.svg"}
+            src={logo}
             alt="Visual Capture Photography"
             className="h-14 md:h-16 w-auto"
             style={{ maxWidth: "200px", height: "auto" }}
-            onError={(e) => {
-              const img = e.currentTarget as HTMLImageElement;
-              if (img.src !== "/placeholder.svg") {
-                img.src = "/placeholder.svg";
-              }
-            }}
           />
           <span className={`hidden sm:block font-heading text-base leading-tight ${scrolled ? "text-ink" : "text-cream"}`}>
             Visual Capture
