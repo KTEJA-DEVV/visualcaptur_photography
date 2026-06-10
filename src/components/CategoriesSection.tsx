@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import weddingsImg from "@/assets/category-weddings.jpg";
-import preWeddingImg from "@/assets/prewedding/red-dress-bridge.jpg";
-import birthdaysImg from "@/assets/category-birthdays.jpg";
-import eventsImg from "@/assets/category-events.jpg";
+import weddingsImg from "@/assets/weddings/bride-rice-shower.jpg";
+import preWeddingImg from "@/assets/prewedding/lake-lift.jpg";
+import birthdaysImg from "@/assets/birthdays/little-king.jpg";
+import eventsImg from "@/assets/weddings/golden-stage.jpg";
 
 const categories = [
   { title: "Weddings", path: "/weddings", image: weddingsImg, desc: "Timeless wedding films & stills" },
