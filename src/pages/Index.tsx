@@ -6,18 +6,21 @@ import MapSection from "@/components/MapSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
+import SplashScreen from "@/components/SplashScreen";
 
 const Index = () => (
-  <div className="min-h-screen bg-background">
-    <Navbar />
-    <HeroSection />
-    <CategoriesSection />
-    <VideosSection />
-    <MapSection />
-    <ContactSection />
-    <Footer />
-    <FloatingActions />
-  </div>
+  <SplashScreen>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <HeroSection />
+      <CategoriesSection />
+      <VideosSection />
+      <MapSection />
+      <ContactSection />
+      <Footer />
+      <FloatingActions />
+    </div>
+  </SplashScreen>
 );
 
 export default Index;
