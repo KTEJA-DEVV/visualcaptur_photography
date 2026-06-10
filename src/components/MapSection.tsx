@@ -27,7 +27,7 @@ const MapSection = () => (
               <MapPin size={18} className="text-coral" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-heading text-ink text-base">Visual Capture Studio</p>
+              <p className="font-heading text-ink text-base">visual capture photography</p>
               <p className="text-muted-foreground text-xs mt-0.5">
                 Shop 7, 8-91/145, Phase 4, Hastinapuram, Hyderabad
               </p>
