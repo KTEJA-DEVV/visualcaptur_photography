@@ -87,7 +87,7 @@ const About = () => (
         </div>
 
         <div>
-          <p className="eyebrow mb-3">Hello, I'm the founder</p>
+          <p className="eyebrow mb-3">Hello, I'm Godugu Ramesh</p>
           <h2 className="font-heading text-3xl md:text-5xl text-ink leading-tight">
             I don't just take pictures — I keep moments.
           </h2>
