@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Phone, MapPin, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.png";
+import brandLogo from "@/assets/visualcapture-logo.png";
 
 const Footer = () => (
   <footer className="bg-ink text-cream">
     <div className="container py-14 md:py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <div className="flex items-center gap-2.5 mb-4">
-            <img src={logo} alt="Visual Capture" className="h-[4.5rem] w-auto" />
-            <span className="font-heading text-lg">Visual Capture</span>
+          <div className="mb-4">
+            <img src={brandLogo} alt="Visual Capture Photography" className="h-[4.5rem] w-auto" />
           </div>
           <p className="text-cream/70 text-sm leading-relaxed max-w-xs">
             Professional photography studio in Hyderabad — capturing life's most beautiful moments.
