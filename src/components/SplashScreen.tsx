@@ -14,8 +14,8 @@ const SplashScreen = ({ children }: { children: React.ReactNode }) => {
       setShowSplash(true);
       sessionStorage.setItem(SPLASH_SHOWN_KEY, "true");
 
-      const fadeTimer = setTimeout(() => setFadeOut(true), 1400);
-      const hideTimer = setTimeout(() => setShowSplash(false), 2000);
+      const fadeTimer = setTimeout(() => setFadeOut(true), 3500);
+      const hideTimer = setTimeout(() => setShowSplash(false), 4500);
 
       return () => {
         clearTimeout(fadeTimer);
