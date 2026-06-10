@@ -3,7 +3,7 @@ import { ArrowLeft, Camera, Heart, Award, Users, Quote, Phone } from "lucide-rea
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
-import photographer from "@/assets/photographer-portrait.jpg.asset.json";
+import photographer from "@/assets/photographer-portrait.jpg";
 
 const stats = [
   { icon: Award, value: "8+", label: "Years of Expertise" },
@@ -68,19 +68,13 @@ const About = () => (
         <div className="relative">
           <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-lift bg-muted flex items-center justify-center">
             <img
-              src={photographer?.url || "/placeholder.svg"}
+              src={photographer}
               alt="Portrait of the photographer holding a gimbal-mounted camera"
               className="w-full h-full object-cover"
               style={{ maxWidth: "100%", height: "100%", objectFit: "cover" }}
               loading="eager"
               decoding="async"
               fetchPriority="high"
-              onError={(e) => {
-                const img = e.currentTarget as HTMLImageElement;
-                if (img.src !== "/placeholder.svg") {
-                  img.src = "/placeholder.svg";
-                }
-              }}
             />
           </div>
           <div className="absolute -bottom-6 -right-2 md:-right-6 bg-cream rounded-2xl shadow-lift px-5 py-4 max-w-[220px]">
