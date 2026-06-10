@@ -32,7 +32,7 @@ const HeroSection = () => (
         <img
           src={brandLogo.url}
           alt="Visual Capture Photography"
-          className="mx-auto my-8 w-[21rem] md:w-[27rem] lg:w-[30rem] h-auto drop-shadow-2xl"
+          className="mx-auto mt-8 w-[21rem] md:w-[27rem] lg:w-[30rem] h-auto drop-shadow-2xl"
         />
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 text-cream text-xs tracking-[0.25em] uppercase">
           <span className="h-1.5 w-1.5 rounded-full bg-coral" />
