@@ -11,7 +11,7 @@ const Footer = () => (
             <img src={brandLogo} alt="Visual Capture Photography" className="h-[4.5rem] w-auto" />
           </div>
           <p className="text-cream/70 text-sm leading-relaxed max-w-xs">
-            Professional photography studio in Hyderabad — capturing life's most beautiful moments.
+            Professional photography in Hyderabad — capturing life's most beautiful moments.
           </p>
           <div className="flex gap-2 mt-5">
             <a href="https://www.instagram.com/visualcapturephotography" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-9 w-9 grid place-items-center rounded-full bg-cream/10 hover:bg-instagram transition-colors"><Instagram size={16} /></a>
