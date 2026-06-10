@@ -31,9 +31,9 @@ import moonOne from "@/assets/birthdays/moon-one.jpg";
 import pinkPrincess from "@/assets/birthdays/pink-princess.jpg";
 import balloonBasket from "@/assets/birthdays/balloon-basket.jpg";
 import littleDoctor from "@/assets/birthdays/little-doctor.jpg";
-import templeBaby from "@/assets/birthdays/temple-baby.jpg.asset.json";
-import littleKing from "@/assets/birthdays/little-king.jpg.asset.json";
-import flowerCart from "@/assets/birthdays/flower-cart.jpg.asset.json";
+import templeBaby from "@/assets/birthdays/temple-baby.jpg";
+import littleKing from "@/assets/birthdays/little-king.jpg";
+import flowerCart from "@/assets/birthdays/flower-cart.jpg";
 
 // Pre Wedding
 import cherry from "@/assets/prewedding/cherry-tree-doorway.jpg";
@@ -61,9 +61,9 @@ const pool = [
   { src: pinkPrincess, alt: "Pink princess birthday" },
   { src: balloonBasket, alt: "Balloon basket setup" },
   { src: littleDoctor, alt: "Doctor theme birthday" },
-  { src: templeBaby.url, alt: "Temple baby" },
-  { src: littleKing.url, alt: "Little king throne" },
-  { src: flowerCart.url, alt: "Flower cart birthday" },
+  { src: templeBaby, alt: "Temple baby" },
+  { src: littleKing, alt: "Little king throne" },
+  { src: flowerCart, alt: "Flower cart birthday" },
   { src: cherry, alt: "Cherry blossom doorway" },
   { src: disco, alt: "Disco dance dip" },
   { src: royalArch, alt: "Royal arch" },
